@@ -1,4 +1,6 @@
-﻿using System;
+﻿using member_management.view;
+using member_management.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,11 +32,12 @@ namespace member_management
             string id = IdTextBox.Text;
             string password = PasswordTextBox.Text;
 
-            // 간단한 예시 로그인 검증 (실제로는 DB나 보안 처리가 필요)
             if (id == "admin" && password == "1234")
             {
-                MessageBox.Show("로그인 성공!", "안내", MessageBoxButton.OK, MessageBoxImage.Information);
-                // TODO: 로그인 후 다른 창 열기 or 화면 전환
+                MessageBox.Show("로그인 성공!", "메세지", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                MemberList memberList = new MemberList();
+                memberList.Show();
             }
             else
             {

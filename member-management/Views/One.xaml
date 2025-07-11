@@ -1,0 +1,52 @@
+﻿<Window x:Class="member_management.view.One"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:member_management.view"
+        mc:Ignorable="d"
+        Title="one" Height="450" Width="800">
+    <Grid>
+        <Canvas Width="200" Height="100">
+            <Button Canvas.Left="10" Canvas.Top="20">Button 1</Button>
+            <TextBox Canvas.Left="60" Canvas.Top="50" Width="100">Text</TextBox>
+        </Canvas>
+
+        <!--
+        <StackPanel Orientation="Horizontal" Width="200">
+            <Button>Button 1</Button>
+            <Button>Button 2</Button>
+            <Button>Button 3</Button>
+        </StackPanel>
+        -->
+        
+        <Grid Width="200" Height="100">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0">Button 1</Button>
+            <Button Grid.Row="1" Grid.Column="1">Button 2</Button>
+        </Grid>
+
+        <DockPanel Width="200" Height="100">
+            <Button DockPanel.Dock="Top">Top Button</Button>
+            <Button DockPanel.Dock="Bottom">Bottom Button</Button>
+            <Button DockPanel.Dock="Left">Left Button</Button>
+            <Button DockPanel.Dock="Right">Right Button</Button>
+            <Button>Fill Button</Button>
+        </DockPanel>
+
+        <WrapPanel Width="200" Height="100">
+            <Button>Button 1</Button>
+            <Button>Button 2</Button>
+            <Button>Button 3</Button>
+            <Button>Button 4</Button>
+            <Button>Button 5</Button>
+        </WrapPanel>
+    </Grid>
+</Window>
