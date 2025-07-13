@@ -38,6 +38,7 @@ namespace member_management
 
                 MemberList memberList = new MemberList();
                 memberList.Show();
+                this.Close();
             }
             else
             {
